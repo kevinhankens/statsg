@@ -25,7 +25,7 @@ func main() {
 	conn, err := net.ListenUDP("udp", udpAddr)
 	checkError(err)
 
-        // thread to capture memory
+        // Channel to send messages to.
         messages := make(chan string)
 
 	// Create a goroutine that will flush messages sent to the shared channel.
